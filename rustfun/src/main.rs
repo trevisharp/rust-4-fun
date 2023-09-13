@@ -1,8 +1,10 @@
 pub mod functions;
 
-use crate::functions::constant::*;
+use crate::functions::function::*;
 
 fn main() {
-    let c = Constant(4.0);
-    println!("Hello, world!");
+    let f = sum(cons(4.0), x());
+    let g = f.derive();
+    let y = g.calc(10.0);
+    println!("{y}");
 }

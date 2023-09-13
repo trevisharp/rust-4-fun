@@ -1,6 +1,6 @@
 use super::function::*;
 
-pub struct Sum(Box<dyn Function>, Box<dyn Function>);
+pub struct Sum(pub Box<dyn Function>, pub Box<dyn Function>);
 
 impl Function for Sum {
     fn calc(&self, x:f32) -> f32 {
